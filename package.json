@@ -3,7 +3,7 @@
     "displayName": "duplicate text (like Sublime text)",
     "description": "Duplicate exactly what you have highlighted. Nothing extra.",
     "version": "0.0.1",
-    "publisher": "none",
+    "publisher": "brian-anders",
     "engines": {
         "vscode": "^1.10.0"
     },
