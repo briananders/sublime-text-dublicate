@@ -1,8 +1,8 @@
 {
     "name": "sublime-duplicate-text",
-    "displayName": "duplicate text (like Sublime text)",
+    "displayName": "Sublime Duplicate Text",
     "description": "Duplicate exactly what you have highlighted. Nothing extra.",
-    "version": "0.0.1",
+    "version": "0.2.0",
     "publisher": "brian-anders",
     "engines": {
         "vscode": "^1.10.0"
@@ -15,10 +15,12 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "sublime-duplicate-text.duplicateText",
-            "title": "Sublime Duplicate Text"
-        }]
+        "commands": [
+            {
+                "command": "sublime-duplicate-text.duplicateText",
+                "title": "Sublime Duplicate Text"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
