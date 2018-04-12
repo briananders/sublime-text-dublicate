@@ -1,37 +1,51 @@
 {
-    "name": "sublime-duplicate-text",
-    "displayName": "Sublime Duplicate Text",
-    "description": "Duplicate exactly what you have highlighted. Nothing extra.",
-    "version": "0.2.0",
-    "publisher": "brian-anders",
-    "engines": {
-        "vscode": "^1.10.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:sublime-duplicate-text.duplicateText"
-    ],
-    "main": "./extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "sublime-duplicate-text.duplicateText",
-                "title": "Sublime Duplicate Text"
-            }
-        ]
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "eslint": "^3.6.0",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
-    }
+  "name": "sublime-duplicate-text",
+  "displayName": "Sublime Duplicate Text",
+  "description": "Duplicate exactly what you have highlighted. Nothing extra.",
+  "version": "0.2.1",
+  "publisher": "brian-anders",
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:sublime-duplicate-text.duplicateText"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sublime-duplicate-text.duplicateText",
+        "title": "Sublime Duplicate Text"
+      },
+      {
+        "mac": "cmd+shift+d",
+        "linux": "ctrl+shift+d",
+        "key": "ctrl+shift+d",
+        "command": "sublime-duplicate-text.duplicateText",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "mac": "cmd+shift+d",
+        "linux": "ctrl+shift+d",
+        "key": "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorFocus && !editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  }
 }

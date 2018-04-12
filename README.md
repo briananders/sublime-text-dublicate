@@ -4,7 +4,7 @@ This extension duplicates strings like Sublime Text. Anything that gets highligh
 
 ## Use
 
-To use these commands, press ⌘+p and enter Sublime Duplicate Text. I like to set ⌘+⇧+d to Sublime Duplicate Text so it just works as I am used to.
+To use these commands, press ⌘+p and enter Sublime Duplicate Text. You will also have a keybinding set for ⌘+⇧+d to duplicate text.
 
 ![Sublime Duplicate Text](images/example.gif)
 
