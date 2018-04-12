@@ -12,16 +12,18 @@ To use these commands, press ⌘+p and enter Sublime Duplicate Text. You will al
 
 Open your keybinding settings with ⌘+K ⌘+S. Then click on the link for keybindings.json. Inside of keybindings.json paste the following code. The second keybinding uses native VSCode functionality, but now your experience will match that of Sublime Text.
 
-<code>{
-&nbsp;&nbsp;"key": "cmd+shift+d",
-&nbsp;&nbsp;"command": "sublime-duplicate-text.duplicateText",
-&nbsp;&nbsp;"when": "editorHasSelection && editorTextFocus"
+```
+{
+  "key": "cmd+shift+d",
+  "command": "sublime-duplicate-text.duplicateText",
+  "when": "editorHasSelection && editorTextFocus"
 },
 {
-&nbsp;&nbsp;"key": "cmd+shift+d",
-&nbsp;&nbsp;"command": "editor.action.copyLinesDownAction",
-&nbsp;&nbsp;"when": "editorFocus && !editorHasSelection"
-}</code>
+  "key": "cmd+shift+d",
+  "command": "editor.action.copyLinesDownAction",
+  "when": "editorFocus && !editorHasSelection"
+}
+```
 
 ## License
 

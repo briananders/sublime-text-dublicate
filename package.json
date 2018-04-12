@@ -2,7 +2,7 @@
   "name": "sublime-duplicate-text",
   "displayName": "Sublime Duplicate Text",
   "description": "Duplicate exactly what you have highlighted. Nothing extra.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "brian-anders",
   "repository": {
     "type": "git",
