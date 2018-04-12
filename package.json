@@ -4,6 +4,10 @@
   "description": "Duplicate exactly what you have highlighted. Nothing extra.",
   "version": "0.2.1",
   "publisher": "brian-anders",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briananders/sublime-text-dublicate"
+  },
   "engines": {
     "vscode": "^1.10.0"
   },
