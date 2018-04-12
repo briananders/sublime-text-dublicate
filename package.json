@@ -2,7 +2,7 @@
   "name": "sublime-duplicate-text",
   "displayName": "Sublime Duplicate Text",
   "description": "Duplicate exactly what you have highlighted. Nothing extra.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "publisher": "brian-anders",
   "repository": {
     "type": "git",
@@ -17,13 +17,16 @@
   "activationEvents": [
     "onCommand:sublime-duplicate-text.duplicateText"
   ],
+  "icon": "images/duplicate.png",
   "main": "./extension",
   "contributes": {
     "commands": [
       {
         "command": "sublime-duplicate-text.duplicateText",
         "title": "Sublime Duplicate Text"
-      },
+      }
+    ],
+    "keybindings": [
       {
         "mac": "cmd+shift+d",
         "linux": "ctrl+shift+d",
