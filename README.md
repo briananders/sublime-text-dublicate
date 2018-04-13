@@ -10,13 +10,13 @@ To use these commands, press ⌘+p and enter Sublime Duplicate Text. You will al
 
 ## Keybinding installation
 
-Open your keybinding settings with ⌘+K ⌘+S. Then click on the link for keybindings.json. Inside of keybindings.json paste the following code. The second keybinding uses native VSCode functionality, but now your experience will match that of Sublime Text.
+This extension will install the following keyboard shortcuts. The second keybinding uses native VSCode functionality, but now your experience will match that of Sublime Text.
 
 ```
 {
   "key": "cmd+shift+d",
   "command": "sublime-duplicate-text.duplicateText",
-  "when": "editorHasSelection && editorTextFocus"
+  "when": "editorTextFocus && editorHasSelection"
 },
 {
   "key": "cmd+shift+d",
