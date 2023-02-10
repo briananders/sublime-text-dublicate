@@ -1,7 +1,7 @@
 const vscode = require('vscode');
-const editor = vscode.window.activeTextEditor;
 
 function duplicateText() {
+  const editor = vscode.window.activeTextEditor;
 
   if (!editor) {
     return;
