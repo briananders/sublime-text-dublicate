@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 
 /**
- * Duplicates the selected text at the selection start position
- * Mimics Sublime Text's duplicate behavior
+ * Duplicates selected text, or the current line when nothing is selected.
+ * Mimics Sublime Text's duplicate behavior.
  */
 function duplicateText(): void {
   const editor = vscode.window.activeTextEditor;
@@ -11,13 +11,17 @@ function duplicateText(): void {
     return;
   }
 
+  const eol = editor.document.eol === vscode.EndOfLine.CRLF ? '\r\n' : '\n';
+
   editor
     .edit((builder) => {
       editor.selections.forEach((selection) => {
-        const text = editor.document.getText(selection);
-        const position = selection.start;
-
-        builder.insert(position, text);
+        if (selection.isEmpty) {
+          const line = editor.document.lineAt(selection.start.line);
+          builder.insert(line.range.end, eol + line.text);
+        } else {
+          builder.insert(selection.start, editor.document.getText(selection));
+        }
       });
     })
     .then(
@@ -26,8 +30,9 @@ function duplicateText(): void {
           vscode.window.showErrorMessage('Failed to duplicate text');
         }
       },
-      (error) => {
-        vscode.window.showErrorMessage(`Error duplicating text: ${error.message}`);
+      (error: unknown) => {
+        const message = error instanceof Error ? error.message : String(error);
+        vscode.window.showErrorMessage(`Error duplicating text: ${message}`);
       }
     );
 }

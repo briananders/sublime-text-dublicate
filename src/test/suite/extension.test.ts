@@ -10,12 +10,6 @@ suite('Extension Test Suite', () => {
 
   test('Should register duplicateText command', async () => {
     const commands = await vscode.commands.getCommands(true);
-    assert.ok(commands.includes('sublime-duplicate-text.duplicateText'));
-  });
-
-  test('Command should be available', async () => {
-    const commands = await vscode.commands.getCommands(true);
-    const hasCommand = commands.includes('sublime-duplicate-text.duplicateText');
-    assert.strictEqual(hasCommand, true, 'Command should be registered');
+    assert.strictEqual(commands.includes('sublime-duplicate-text.duplicateText'), true, 'Command should be registered');
   });
 });

@@ -1,1 +1,9 @@
 sublime-duplicate-text-*
+node_modules
+out
+dist
+*.vsix
+.vscode-test
+.DS_Store
+.claude
+OPTIMIZATION_SUMMARY.md
