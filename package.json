@@ -15,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:sublime-duplicate-text.duplicateText"
+    "onStartupFinished"
   ],
   "license": "MIT",
   "icon": "images/duplicate.png",

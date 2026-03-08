@@ -34,7 +34,7 @@ This extension registers the following shortcut automatically:
 ### Prerequisites
 
 - Node.js 18.x or 20.x
-- npm or yarn
+- npm
 
 ### Setup
 
