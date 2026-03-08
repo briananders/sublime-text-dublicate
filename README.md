@@ -1,50 +1,71 @@
 # Sublime Text Duplicate for VSCode
 
-This extension duplicates strings like Sublime Text. Anything that gets highlighted gets duplicated, rather than the entire lines even when just a part of a string is highlighted.
+Mirrors Sublime Text's duplicate behavior in VS Code:
 
-## Use
+- **With selection** — duplicates the selected text inline
+- **Without selection** — duplicates the entire current line
+- Supports multiple cursors/selections simultaneously
 
-To use these commands, press ⌘+p and enter Sublime Duplicate Text. You will also have a keybinding set for ⌘+⇧+d to duplicate text.
+## Usage
+
+Press `⌘+Shift+D` (Mac) or `Ctrl+Shift+D` (Windows/Linux) to duplicate text.
+
+You can also run it from the command palette (`⌘+Shift+P` / `Ctrl+Shift+P`): search for **Sublime Duplicate Text**.
 
 ![Sublime Duplicate Text](images/example.gif)
 
-## Keybinding installation
+## Keybindings
 
-This extension will install the following keyboard shortcuts. The second keybinding uses native VSCode functionality, but now your experience will match that of Sublime Text.
+This extension registers the following shortcut automatically:
+
+```json
+[
+  {
+    "mac": "cmd+shift+d",
+    "key": "ctrl+shift+d",
+    "command": "sublime-duplicate-text.duplicateText",
+    "when": "editorTextFocus"
+  }
+]
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js 18.x or 20.x
+- npm
+
+### Setup
+
+```bash
+npm install        # Install dependencies
+npm run compile    # Compile TypeScript
+npm run watch      # Watch mode
+npm test           # Run tests
+npm run lint       # Lint
+npm run format     # Format
+```
+
+### Project Structure
 
 ```
-{
-  "key": "cmd+shift+d",
-  "command": "sublime-duplicate-text.duplicateText",
-  "when": "editorTextFocus && editorHasSelection"
-},
-{
-  "key": "cmd+shift+d",
-  "command": "editor.action.copyLinesDownAction",
-  "when": "editorFocus && !editorHasSelection"
-}
+.
+├── src/              # TypeScript source files
+│   └── test/         # Test suite
+├── out/              # Compiled JavaScript (gitignored)
+├── .github/          # CI/CD workflows
+└── package.json      # Extension manifest
 ```
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Version History
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) 2017 Brian Anders
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT — Copyright (c) 2017 Brian Anders

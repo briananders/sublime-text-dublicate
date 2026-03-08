@@ -1,7 +1,34 @@
+# Source files
+src/**
+test/**
+
+# Config files
 .vscode/**
 .vscode-test/**
-test/**
 .gitignore
+.eslintrc.json
+tsconfig.json
 jsconfig.json
 vsc-extension-quickstart.md
-.eslintrc.json
+
+# Documentation
+*.md
+!README.md
+
+# Build artifacts
+node_modules/**
+.npm/**
+
+# Media source files
+images/**/*.mov
+
+# CI/CD
+.github/**
+
+# Package manager files
+yarn.lock
+package-lock.json
+
+# Misc
+.DS_Store
+*.vsix

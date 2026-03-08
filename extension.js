@@ -12,7 +12,6 @@ function duplicateText() {
       const text = editor.document.getText(selection);
       const position = selection.start;
 
-      console.log(text);
       builder.insert(position, text);
     });
   });
