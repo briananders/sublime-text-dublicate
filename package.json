@@ -50,6 +50,9 @@
     "package": "vsce package",
     "clean": "rm -rf out"
   },
+  "overrides": {
+    "serialize-javascript": "^7.0.5"
+  },
   "devDependencies": {
     "@types/mocha": "^10.x",
     "@types/node": "^20.x",
